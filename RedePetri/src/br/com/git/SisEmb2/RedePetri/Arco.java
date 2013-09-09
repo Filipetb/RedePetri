@@ -10,9 +10,10 @@ package br.com.git.SisEmb2.RedePetri;
  */
 public class Arco {
     
-    private int peso;
-    private Lugar lugar;
-    private Transicao trans;
+    private int peso; //Peso do arco.
+    private Lugar lugar; //De qual Lugar o arco sai ou entra.
+    private Transicao trans; //De qual Transiçao o arco sai ou entra.
+    private boolean EntradaT; // Variavel que define se o arco leva ou sai de uma transição.
 
     public Arco(int peso, Lugar lugar, Transicao trans) {
         this.peso = peso;
