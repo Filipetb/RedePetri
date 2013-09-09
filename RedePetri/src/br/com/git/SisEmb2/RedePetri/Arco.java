@@ -10,21 +10,27 @@ package br.com.git.SisEmb2.RedePetri;
  */
 public class Arco {
     
+    private int id; //Identificador do arco.
     private int peso; //Peso do arco.
     private Lugar lugar; //De qual Lugar o arco sai ou entra.
     private Transicao trans; //De qual Transiçao o arco sai ou entra.
-    private boolean EntradaT; // Variavel que define se o arco leva ou sai de uma transição.
+    private boolean entradaT; // Variavel que define se o arco leva ou sai de uma transição.
 
-    public Arco(int peso, Lugar lugar, Transicao trans) {
+    //Se et for falso significa que o Arco ta saindo de uma transição e entrando em um lugar e vice-versa.
+    public Arco(int id, int peso, Lugar lugar, Transicao trans, boolean et) {
+        this.id = id;
         this.peso = peso;
         this.lugar = lugar;
         this.trans = trans;
+        this.entradaT = et;
     }
 
-    public Arco(Lugar lugar, Transicao trans) {
+    public Arco(int id, Lugar lugar, Transicao trans, boolean et) {
+        this.id = id;
         this.peso = 1;
         this.lugar = lugar;
         this.trans = trans;
+        this.entradaT = et;
     }
     
     public int getPeso() {
@@ -50,6 +56,16 @@ public class Arco {
     public void setTrans(Transicao trans) {
         this.trans = trans;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public boolean isEntradaT() {
+        return entradaT;
+    }
+    
+    
     
     
     
