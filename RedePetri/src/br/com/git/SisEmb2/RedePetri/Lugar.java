@@ -14,19 +14,18 @@ public class Lugar {
     private String desc_lugar;
     //Número de fichas do lugar.
     private int num_ficha;
-    private boolean marcacao;
+    
 
     //Construtores
     public Lugar(String desc_lugar) {
         this.desc_lugar = desc_lugar;
         this.num_ficha = 0;
-        this.marcacao = false;
     }
 
     public Lugar(String desc_lugar, int fichas) {
         this.desc_lugar = desc_lugar;
         this.num_ficha = fichas;
-        this.marcacao = true;
+    
     }
     
     
@@ -46,7 +45,5 @@ public class Lugar {
     public void setNum_ficha(int num_ficha) {
         this.num_ficha = num_ficha;
     }
-    
-    
     
 }
